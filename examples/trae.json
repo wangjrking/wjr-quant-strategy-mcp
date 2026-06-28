@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "wjr-quant-sse": {
+      "type": "sse",
+      "url": "http://mcp.wjr.world/mcp-servers/wjr-quant-sse/sse",
+      "headers": {
+        "Authorization": "Bearer <你的AI网关消费者Token>"
+      }
+    }
+  }
+}
