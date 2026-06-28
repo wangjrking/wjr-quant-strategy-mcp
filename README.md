@@ -1,13 +1,13 @@
-# WJR量化策略MCP
+# WJR 量化策略 MCP
 
-WJR量化策略MCP是一个面向 MCP 客户端的公网策略资产服务，用来查询已经发布的量化策略资产。
+WJR 量化策略 MCP 是一个面向普通用户的公网 MCP 服务，用来查看已经发布的量化策略资产。
 
 你可以用它查看：
 
-- 有哪些可用策略
+- 当前有哪些可用策略
 - 某个策略是做什么的
 - 某个策略最新发布了什么信号
-- 某个策略的历史信号和历史效果材料
+- 某个策略的历史信号、历史效果和主要风险
 
 它适用于 TRAE、Cursor、Cherry Studio、Qwen Code，以及其他支持远程 SSE MCP Server 的客户端。
 
@@ -22,7 +22,7 @@ http://mcp.wjr.world/mcp-servers/wjr-quant-sse/sse
 认证方式：
 
 ```text
-Authorization: Bearer <你的AI网关消费者Token>
+Authorization: Bearer <你的 AI 网关消费者 Token>
 ```
 
 TRAE / Cursor 配置：
@@ -34,7 +34,7 @@ TRAE / Cursor 配置：
       "type": "sse",
       "url": "http://mcp.wjr.world/mcp-servers/wjr-quant-sse/sse",
       "headers": {
-        "Authorization": "Bearer <你的AI网关消费者Token>"
+        "Authorization": "Bearer <你的 AI 网关消费者 Token>"
       }
     }
   }
@@ -48,8 +48,7 @@ TRAE / Cursor 配置：
 | 工具名 | 用途 |
 | --- | --- |
 | `get_strategy_overview` | 查看可用策略清单，或查看指定策略的介绍、规则说明和适用边界 |
-| `get_latest_signal` | 查看某个策略已经发布的最新信号 |
-| `get_strategy_history_and_performance` | 查看某个策略的历史信号和历史效果材料 |
+| `get_strategy_report` | 查看指定策略的报告，可选择最新信号、历史信号、策略效果、风险说明或完整报告 |
 
 ## 推荐提问
 
@@ -58,7 +57,11 @@ TRAE / Cursor 配置：
 ```
 
 ```text
-查看某个策略的最新信号，并解释字段含义。
+查看某个策略的完整报告，并用普通人能懂的话解释。
+```
+
+```text
+查看某个策略的最新信号，并说明这些字段是什么意思。
 ```
 
 ```text
