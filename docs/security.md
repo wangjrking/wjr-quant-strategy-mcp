@@ -1,26 +1,46 @@
-# Security Notes
+# 安全说明
 
-## Token Handling
+## Token 使用规则
 
-- Never commit real AI gateway consumer tokens.
-- Never paste real tokens into public issues, screenshots, docs, or chat logs.
-- Rotate a token immediately if it has been exposed.
-- Use one token per consumer when possible.
+- 不要把真实 AI 网关消费者 Token 提交到 GitHub。
+- 不要把真实 Token 发到公开 Issue、截图、文档或聊天记录中。
+- 如果 Token 已经泄露，应立即在 AI 网关中禁用或重置。
+- 如果要给不同用户使用，建议每个用户单独分配 Token，便于停用和追踪。
 
-## Service Boundary
+## 客户端配置规则
 
-The MCP service is read-only and only exposes published strategy assets.
+配置中只应该出现：
 
-It must not expose:
+```text
+Authorization: Bearer <你的AI网关消费者Token>
+```
 
-- raw production databases
-- private model files
-- factor libraries
-- internal strategy parameters
-- account holdings
-- order routing details
-- secret keys or connection strings
+不要公开：
 
-## User-Facing Risk Notice
+- 真实 Token
+- 数据库账号
+- 数据库密码
+- 数据库连接串
+- 服务器内网地址
+- 对象存储密钥
+- 内部模型文件路径
+- 未发布策略参数
 
-All outputs are strategy asset information, not investment advice. Historical performance does not represent future returns.
+## 服务边界
+
+WJR量化策略MCP 是只读策略资产服务，只对外展示已经发布的策略信息。
+
+它不应该暴露：
+
+- 生产数据库
+- 原始行情库
+- 内部因子库
+- 私有模型文件
+- 内部策略参数
+- 账户持仓
+- 下单通道
+- 密钥或连接串
+
+## 投资风险
+
+本服务输出的是策略资产信息，不是投资顾问意见。历史效果不代表未来收益，用户需要自行判断风险、仓位、流动性和交易成本。
