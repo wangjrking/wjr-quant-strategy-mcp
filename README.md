@@ -137,33 +137,6 @@ Authorization: Bearer <你的AI网关消费者Token>
 查看某个策略的历史信号和历史效果，说明主要风险。
 ```
 
-## 魔塔 MCP 广场发布信息
-
-在魔塔 MCP Server 创建页面可使用以下信息：
-
-```text
-GitHub地址：
-https://github.com/wangjrking/wjr-quant-strategy-mcp
-
-英文名称：
-wjr-quant-strategy-mcp
-
-中文名称：
-WJR量化策略MCP
-
-所有者：
-wjr0808
-
-是否公开：
-公开
-
-托管类型：
-仅本地可用
-
-自定义标签：
-金融、量化、股票、策略、投资辅助、MCP
-```
-
 ## 风险提示
 
 本项目是策略资产信息服务，不是投资顾问服务。用户应结合自身风险承受能力、流动性、交易成本、仓位管理和相关监管要求独立判断。
